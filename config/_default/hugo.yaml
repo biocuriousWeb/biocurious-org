@@ -2,13 +2,13 @@ languageCode: 'en-us'
 title: 'BioCurious'
 theme: 
 - "hugo-shortcode-roneo-collection"
-#- "PaperMod"
+- "hextra"
 
-outputs:
-  home:
-  - HTML
-  - RSS
-  - JSON
+# outputs:
+#   home:
+#   - HTML
+#   - RSS
+#   - JSON
 
 #   social:
 #     #github: 
