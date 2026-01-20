@@ -1,9 +1,10 @@
-Located in Santa Clara, California (near San Jose)
+---
+---
 
-{{< cards cols="6" >}}
+{{< cards cols="3" >}}
 
   {{< card link="/lab" title="The Lab" 
-      image="/img/Projects-circle.jpg"
+      image="/img/Projects.jpg"
       subtitle="new pic please" 
       tag="do sci"
       tagColor="green"
@@ -15,10 +16,12 @@ Located in Santa Clara, California (near San Jose)
       >}}
 
   {{< card link="/events" title="Events"
-      image="/img/Events-circle.jpg"
+      image="/img/Events.jpg"
       subtitle="other events"
       >}}
 
 {{< /cards >}}
 
+
+Located in Santa Clara, California (near San Jose)
 
