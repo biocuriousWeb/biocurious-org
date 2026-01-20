@@ -1,0 +1,29 @@
+default:
+  image: "hugomods/hugo:exts"
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_DEPTH: 1
+
+test:  # builds and tests your site
+  script:
+    # - git submodule update --remote --merge
+    - git submodule update --init
+    - hugo
+  rules:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+  environment: development
+
+create-pages:  # a user-defined job that builds your pages and saves them to the specified path.
+  script:
+    # - git submodule update --remote --merge
+    - git submodule update --init --remote --merge
+    - hugo --gc
+    # run: | hugo \ --gc --minify \ --baseURL "https://${{ github.repository_owner }}.github.io/"
+  pages: true  # specifies that this is a Pages job
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  environment: production
