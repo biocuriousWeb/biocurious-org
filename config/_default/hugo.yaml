@@ -1,0 +1,38 @@
+languageCode: 'en-us'
+title: 'BioCurious'
+theme: 
+- "hugo-shortcode-roneo-collection"
+#- "PaperMod"
+
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+
+#   social:
+#     #github: 
+#     linkedin: 'https://www.linkedin.com/company/biocurious/'
+#     #instagram:
+#   profileMode:
+#     enabled: false
+
+# menu:
+#   main:
+#
+#   - name: FAQ
+#     url: "/faq"
+#     weight: 10
+#   - name: Wiki
+#     url: "https://gitlab.com/biocurious/wiki-bioc/-/wikis/home"
+#     weight: 15
+#   - name: Events
+#     url: "/events"
+#     weight: 20
+#   - name: Membership
+#     url: "/membership"
+#     weight: 30
+#   - name: Donations
+#     url: "/donations"
+#     weight: 50
+
