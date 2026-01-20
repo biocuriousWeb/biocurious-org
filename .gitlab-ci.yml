@@ -18,8 +18,7 @@ create-pages:  # a user-defined job that builds your pages and saves them to the
   script:
     # - git submodule update --remote --merge
     - git submodule update --init --remote --merge
-    - hugo --gc
-    # run: | hugo \ --gc --minify \ --baseURL "https://${{ github.repository_owner }}.github.io/"
+    - hugo --gc --baseURL "https://darachm.github.io/biocurious-org"
   pages: true  # specifies that this is a Pages job
   artifacts:
     paths:
