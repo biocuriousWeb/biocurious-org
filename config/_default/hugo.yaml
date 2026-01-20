@@ -12,7 +12,7 @@ params:
     displayLogo: true
     logo:
       path: 'img/biocurious-logo.png'
-      link: '/'
+      link: '/biocurious-org/'
       width: 200
       height: 200
 
