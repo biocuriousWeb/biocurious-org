@@ -39,6 +39,7 @@ params:
   blog:
     list:
       displayTags: true
+      pagerSize: 20
     toc:
       displayTags: true
 

@@ -3,6 +3,26 @@ date: '2025-12-21T11:58:09-08:00'
 title: 'Membership'
 ---
 
+{{% steps %}}
+
+### Step 1
+
+Pay money
+
+### Step 2
+
+Ask if you can do your thing
+
+### Step 3
+
+???
+
+### Step 4
+
+Science!
+
+{{% /steps %}}
+
 $120 a month
 
 free volunteers
