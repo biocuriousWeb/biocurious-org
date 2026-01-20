@@ -1,43 +1,24 @@
-# Welcome to The World’s Largest Community Lab Space for Biology
+Located in Santa Clara, California (near San Jose)
 
-#### Located in Santa Clara, California (near San Jose)
+{{< cards cols="6" >}}
 
-{{< four-columns >}}
+  {{< card link="/lab" title="The Lab" 
+      image="/img/Projects-circle.jpg"
+      subtitle="new pic please" 
+      tag="do sci"
+      tagColor="green"
+      >}}
 
-![projetz](Projects-circle.jpg)
+  {{< card link="/projects" title="Projects"
+      image="/img/bio-printer-circle.jpg"
+      subtitle="are they happening"
+      >}}
 
-Projects
-Projects
-Active & Previous
+  {{< card link="/events" title="Events"
+      image="/img/Events-circle.jpg"
+      subtitle="other events"
+      >}}
+
+{{< /cards >}}
 
 
-{{< column >}}
-
-![print](bio-printer-circle.jpg)
-
-One of the most asked questions at BioCurious is, “What are people working on?” We’re glad you asked.
-Explore Projects
-Events
-Event Calendar
-Upcoming BioCurious Events
-
-{{< column >}}
-
-![workshopz](Workshops-circle.jpg)
-
-Interested in checking things out? Find upcoming classes, lectures, and community projects we are working on.
-See Events
-Workshops
-Workshops
-Mind Blowing Innovation
-
-We've created these workshops to let you experience discovery and open innovation for yourself.
-Join a Workshop
-
-{{< column >}}
-
-![eventz](Events-circle.jpg)
-
-events
-
-{{< endcolumns >}}

@@ -17,22 +17,94 @@ theme:
 #   profileMode:
 #     enabled: false
 
-# menu:
-#   main:
-#
-#   - name: FAQ
-#     url: "/faq"
-#     weight: 10
-#   - name: Wiki
-#     url: "https://gitlab.com/biocurious/wiki-bioc/-/wikis/home"
-#     weight: 15
-#   - name: Events
-#     url: "/events"
-#     weight: 20
-#   - name: Membership
-#     url: "/membership"
-#     weight: 30
-#   - name: Donations
-#     url: "/donations"
-#     weight: 50
+params:
 
+  navbar:
+    # width: normal
+    displayTitle: false
+    displayLogo: true
+    logo:
+      path: 'img/biocurious-logo.png'
+      link: '/'
+      width: 200
+      height: 200
+
+  footer:
+    # width: normal
+
+  theme:
+    default: 'light'
+    displayToggle: false
+
+  enableGitInfo: true
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  page:
+    # width: normal
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+
+  blog:
+    list:
+      displayTags: true
+    toc:
+      displayTags: true
+
+menu:
+  main:
+
+  - name: About
+    pageRef: "/about"
+    weight: 10
+
+  - name: Events
+    pageRef: "/events"
+    weight: 20
+
+  - name: Projects
+    identifier: projects
+    pageRef: "/projects/"
+    weight: 30
+
+  - name: Project A
+    pageRef: "/projects/project-a"
+    parent: projects
+  - name: Project B
+    pageRef: "/projects/project-b"
+    parent: projects
+
+  - name: Blog
+    pageRef: "/blog/"
+    weight: 40
+
+  #
+
+  - name: Membership
+    pageRef: "/membership"
+    weight: 50
+
+  - name: FAQ
+    pageRef: "/faq"
+    weight: 60
+
+  - name: Donations
+      #name: "Donate reagents and gear"
+    pageRef: "/donations"
+    weight: 70
+
+  #
+ 
+  - name: Search
+    weight: 100
+    params:
+      type: search
+
+  - name: Wiki
+    url: "https://gitlab.com/biocurious/wiki-bioc/-/wikis/home"
+    weight: 90
+ 
