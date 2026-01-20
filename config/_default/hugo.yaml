@@ -4,19 +4,6 @@ theme:
 - "hugo-shortcode-roneo-collection"
 - "hextra"
 
-# outputs:
-#   home:
-#   - HTML
-#   - RSS
-#   - JSON
-
-#   social:
-#     #github: 
-#     linkedin: 'https://www.linkedin.com/company/biocurious/'
-#     #instagram:
-#   profileMode:
-#     enabled: false
-
 params:
 
   navbar:
@@ -59,7 +46,7 @@ menu:
   main:
 
   - name: About
-    pageRef: "/about"
+    pageRef: "/about/"
     weight: 10
 
   - name: Events
@@ -71,12 +58,12 @@ menu:
     pageRef: "/projects/"
     weight: 30
 
-  - name: Project A
-    pageRef: "/projects/project-a"
-    parent: projects
-  - name: Project B
-    pageRef: "/projects/project-b"
-    parent: projects
+  # - name: Project A
+  #   pageRef: "/projects/project-a"
+  #   parent: projects
+  # - name: Project B
+  #   pageRef: "/projects/project-b"
+  #   parent: projects
 
   - name: Blog
     pageRef: "/blog/"
