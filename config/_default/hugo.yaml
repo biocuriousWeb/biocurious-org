@@ -4,6 +4,12 @@ theme:
 - "hugo-shortcode-roneo-collection"
 - "hextra"
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: "true"
+
+
 params:
 
   address: "3108 Patrick Henry Drive, Santa Clara, CA, 95054"

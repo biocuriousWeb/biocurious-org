@@ -1,16 +1,23 @@
 ---
 ---
 
-BioCurious is a community lab that's been around since 2010.
-We are a space where people can test new ideas,
-help each other out, and fiddle with reality. Etc.
+
+Welcome to BioCurious!
+
+At BioCurious, we believe that innovations in biology should be accessible,
+affordable, and open to everyone. We've built a community biology lab for
+amateurs, inventors, entrepreneurs, students, and anyone who wants to 
+experiment with friends. 
+Here you can cheaply access equipment, materials, and co-working space,
+and the lab serves as a meeting place for citizen scientists, 
+hobbyists, activists, students, and the community.
 
 {{< cards cols="3" >}}
 
-  {{< card link="/projects" title="Impact"
+  {{< card link="/projects" title="Projects"
       image="/img/bio-printer-circle.jpg"
-      subtitle="(in lieu of other title) - What is a title that encompasses {past and future} of {businesses, projects, students}?"
-      tag="history"
+      subtitle="Past and present businesses and other projects, including solo projects"
+      tag="projects"
       tagColor="blue"
       >}}
 
