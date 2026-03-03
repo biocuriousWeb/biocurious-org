@@ -46,8 +46,8 @@ params:
 menu:
   main:
 
-  - name: About
-    pageRef: "/about/"
+  - name: FAQ
+    pageRef: "/faq/"
     weight: 10
 
   - name: Events
@@ -75,10 +75,6 @@ menu:
   - name: Membership
     pageRef: "/membership"
     weight: 50
-
-  - name: FAQ
-    pageRef: "/faq"
-    weight: 60
 
   - name: Donations
       #name: "Donate reagents and gear"
