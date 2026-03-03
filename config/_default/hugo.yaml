@@ -6,6 +6,10 @@ theme:
 
 params:
 
+  address: "3108 Patrick Henry Drive, Santa Clara, CA, 95054"
+  email: "info@biocurious.org"
+  #phone: "555 555 5555"
+
   navbar:
     # width: normal
     displayTitle: false
@@ -17,7 +21,8 @@ params:
       height: 200
 
   footer:
-    # width: normal
+    enabled: "true"
+    displayCopyright: "true"
 
   theme:
     default: 'light'
@@ -83,12 +88,13 @@ menu:
 
   #
  
-  - name: Search
-    weight: 100
-    params:
-      type: search
 
   - name: Wiki
     url: "https://gitlab.com/biocurious/wiki-bioc/-/wikis/home"
     weight: 90
+
+  - name: Search
+    weight: 100
+    params:
+      type: search
  
