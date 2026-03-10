@@ -36,7 +36,7 @@ pages-publish:
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   image: python:latest
-  dependencies:
+  needs:
     - hugo
     - wiki
   pages:
