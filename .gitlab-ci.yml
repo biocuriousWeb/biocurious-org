@@ -19,8 +19,13 @@ hugo:
 wiki:
   image: python:latest
   script:
+    - ls
+    - pwd
     - git clone https://gitlab.com/darachm/biocurious-org.wiki wiki
     - pip install zensical
+    - ls
+    - ls -a
+    - pwd
     - zensical build 
     - find public/wiki -name '*.html' -type f -print0 | xargs -0 sed -i 's/.md"\( title="Edit this page" class="md-content__button md-icon" rel="edit"\)/?edit=true" \1/g'
     - find public/wiki -name '*.html' -type f -print0 | xargs -0 sed -i 's/.md"\( title="View source of this page" class="md-content__button md-icon"\)/" \1/g'
