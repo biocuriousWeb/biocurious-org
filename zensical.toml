@@ -3,7 +3,7 @@ site_name = "BioCurious Wiki"
 site_url = "https://darachm.gitlab.io/biocurious-org/wiki/"
 
 docs_dir = "wiki"
-site_dir = "public/wiki"
+site_dir = "raw-wiki"
 
 use_directory_urls = "true"
 

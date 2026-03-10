@@ -17,21 +17,15 @@ hugo:
   environment: production
 
 wiki:
-  image: python:latest
+  #image: python:latest
+  image: zensical/zensical
   script:
-    - ls
-    - pwd
-    - git clone https://gitlab.com/darachm/biocurious-org.wiki wiki
-    - pip install zensical
-    - ls
-    - ls -a
-    - pwd
-    - zensical build 
-    - find public/wiki -name '*.html' -type f -print0 | xargs -0 sed -i 's/.md"\( title="Edit this page" class="md-content__button md-icon" rel="edit"\)/?edit=true" \1/g'
-    - find public/wiki -name '*.html' -type f -print0 | xargs -0 sed -i 's/.md"\( title="View source of this page" class="md-content__button md-icon"\)/" \1/g'
+    # - git clone https://gitlab.com/darachm/biocurious-org.wiki wiki
+    # - pip install zensical
+    - zensical build --clean
   artifacts:
     paths:
-      - public/wiki
+      - raw-wiki
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     paths:
@@ -49,6 +43,9 @@ pages-publish:
   pages:
     publish: public
   script:
-    - echo "hi"
+    - ls
+    - cp -r raw-wiki public/wiki
+    - find public/wiki -name '*.html' -type f -print0 | xargs -0 sed -i 's/.md"\( title="Edit this page" class="md-content__button md-icon" rel="edit"\)/?edit=true" \1/g'
+    - find public/wiki -name '*.html' -type f -print0 | xargs -0 sed -i 's/.md"\( title="View source of this page" class="md-content__button md-icon"\)/" \1/g'
 
 

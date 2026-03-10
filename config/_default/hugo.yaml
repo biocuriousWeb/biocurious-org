@@ -96,7 +96,7 @@ menu:
  
 
   - name: Wiki
-    url: "https://gitlab.com/biocurious/wiki-bioc/-/wikis/home"
+    url: "/wiki"
     weight: 90
 
   - name: Search
