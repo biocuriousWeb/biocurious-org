@@ -37,5 +37,7 @@ wiki:
 pages-publish:
   pages:
     publish: public
+  script:
+    - echo "hi"
 
 
