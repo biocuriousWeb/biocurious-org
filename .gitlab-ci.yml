@@ -1,28 +1,41 @@
-default:
-  image: "hugomods/hugo:exts"
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   GIT_SUBMODULE_DEPTH: 1
+  GIT_SUBMODULE_FORCE_HTTPS: "true"
 
-test:  # builds and tests your site
+hugo: 
+  image: "hugomods/hugo:exts"
   script:
-    # - git submodule update --remote --merge
-    - git submodule update --init
-    - hugo
-  rules:
-    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
-  environment: development
-
-create-pages:  # a user-defined job that builds your pages and saves them to the specified path.
-  script:
-    # - git submodule update --remote --merge
     - git submodule update --init --remote --merge
     - hugo --gc --baseURL "https://darachm.github.io/biocurious-org"
-  pages: true  # specifies that this is a Pages job
   artifacts:
     paths:
       - public
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   environment: production
+
+wiki:
+  image: python:latest
+  script:
+    - git clone https://gitlab.com/darachm/biocurious-org.wiki wiki
+    - pip install zensical
+    - zensical build --clean
+    - find public/wiki -name '*.html' -type f -print0 | xargs -0 sed -i 's/.md"\( title="Edit this page" class="md-content__button md-icon" rel="edit"\)/?edit=true" \1/g'
+    - find public/wiki -name '*.html' -type f -print0 | xargs -0 sed -i 's/.md"\( title="View source of this page" class="md-content__button md-icon"\)/" \1/g'
+  artifacts:
+    paths:
+      - public/wiki
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - ~/.cache/ 
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+
+pages-publish:
+  pages:
+    publish: public
+
+
