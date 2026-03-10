@@ -35,6 +35,9 @@ wiki:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 
 pages-publish:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  image: python:latest
   pages:
     publish: public
   script:
