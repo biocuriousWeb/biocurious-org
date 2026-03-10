@@ -5,18 +5,20 @@ variables:
   GIT_SUBMODULE_FORCE_HTTPS: "true"
 
 hugo: 
-  image: "hugomods/hugo:exts"
-  script:
-    #- git submodule update --init --remote --merge
-    - hugo --gc --baseURL "https://darachm.github.io/biocurious-org"
-  artifacts:
-    paths:
-      - public
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   environment: production
+  image: "hugomods/hugo:exts"
+  script:
+    #- git submodule update --init --remote --merge
+    - hugo --gc --baseURL "https://darachm.gitlab.io/biocurious-org"
+  artifacts:
+    paths:
+      - public/
 
 wiki:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   image: python:latest
   script:
     - git clone https://gitlab.com/darachm/biocurious-org.wiki wiki
@@ -24,13 +26,11 @@ wiki:
     - zensical build --clean
   artifacts:
     paths:
-      - raw-wiki
+      - raw-wiki/
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     paths:
       - ~/.cache/ 
-  rules:
-    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 
 pages-publish:
   rules:
