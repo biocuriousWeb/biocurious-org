@@ -7,7 +7,7 @@ variables:
 hugo: 
   image: "hugomods/hugo:exts"
   script:
-    - git submodule update --init --remote --merge
+    #- git submodule update --init --remote --merge
     - hugo --gc --baseURL "https://darachm.github.io/biocurious-org"
   artifacts:
     paths:
