@@ -1,0 +1,29 @@
+[project]
+site_name = "BioCurious Wiki"
+site_url = "https://darachm.gitlab.io/biocurious-org/wiki/"
+
+docs_dir = "wiki"
+site_dir = "public/wiki"
+
+use_directory_urls = "true"
+
+repo_url = "https://gitlab.com/darachm/biocurious-org/"
+edit_uri = "-/wikis/"
+
+nav = [
+    "home.md"
+]
+
+[project.theme]
+features = [
+    "content.action.edit", # Edit this page
+    "content.action.view",  # View source of this page
+    "navigation.instant", 
+    "navigation.instant.prefetch",
+    "navigation.instant.progress"
+]
+
+# theme:
+#   features:
+#     - navigation.instant
+
