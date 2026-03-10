@@ -96,7 +96,7 @@ menu:
  
 
   - name: Wiki
-    url: "/wiki"
+    url: "/wiki/home"
     weight: 90
 
   - name: Search
