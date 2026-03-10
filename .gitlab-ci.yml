@@ -17,11 +17,10 @@ hugo:
   environment: production
 
 wiki:
-  #image: python:latest
-  image: zensical/zensical
+  image: python:latest
   script:
-    # - git clone https://gitlab.com/darachm/biocurious-org.wiki wiki
-    # - pip install zensical
+    - git clone https://gitlab.com/darachm/biocurious-org.wiki wiki
+    - pip install zensical
     - zensical build --clean
   artifacts:
     paths:
