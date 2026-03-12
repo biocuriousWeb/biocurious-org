@@ -1,74 +1,11 @@
 ---
 date: '2025-12-21T11:58:09-08:00'
-title: 'Membership'
+title: 'Memberships, add-ons, space rental'
 ---
 
-{{< cards cols="3" >}}
-
-  {{< card title="Base Membership, Adult" 
-      image="/img/base-membership.jpg"
-      subtitle="24/7 lab access, work on your own project (subject to approval by Safety Committee), 18+"
-      tag="$130/month"
-      tagColor="purple"
-      >}}
-
-  {{< card title="Family Membership" 
-      image="/img/family-membership.jpg"
-      subtitle="24/7 lab access for under-18 scientist and their parent/guardian" 
-      tag="$200/month"
-      tagColor="purple"
-      >}}
-
-{{< /cards >}}
-
-Add-ons
-
-{{< cards cols="3" >}}
-
-  {{< card title="Dry Storage Bin" 
-      image="/img/dry-storage-bin.jpg"
-      subtitle="Bin to keep your stuff in"
-      tag="+$10/month"
-      tagColor="purple"
-      >}}
-
-  {{< card title="Ultra-cold storage (-80C)" 
-      image="/img/minus-eighty.jpg"
-      subtitle="6 boxes in a minus eighty"
-      tag="+$20/month"
-      tagColor="purple"
-      >}}
-
-  {{< card title="Tissue Culture Access" 
-      image="/img/tissue-culture-access.jpg"
-      subtitle="Controlled access tissue culture (BSL1 only!)"
-      tag="+$100/month"
-      tagColor="purple"
-      >}}
-
-{{< /cards >}}
-
-Reserved and private labs and offices:
-
-{{< cards cols="3" >}}
-
-  {{< card title="Private Bench" 
-      image="/img/private-bench.jpg"
-      subtitle="Your own bench, in the common lab area. You can keep whatever you want on it, as long as its safe, legal, and doesn't disrupt others' use of the other common lab areas."
-      tag="$500/month"
-      tagColor="purple"
-      >}}
-
-  {{< card title="Office/lab" 
-      image="/img/corner-office.jpg"
-      subtitle="XxY office, locking door"
-      tag="$1200/month"
-      tagColor="purple"
-      >}}
-
-{{< /cards >}}
-
 ## The process
+
+{{% steps %}}
 
 ### Give us your money
 
@@ -76,6 +13,87 @@ Reserved and private labs and offices:
 
 ### ???
 
-### Science!
+### science maybe
 
+{{% /steps %}}
+
+
+{{% flexcols %}}
+### Memberships
+{{% /flexcols %}}
+
+{{< rawhtml >}}
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+{{< /rawhtml >}}
+
+{{< flexcols >}}
+
+<!--- standard --->
+<stripe-buy-button
+  buy-button-id="buy_btn_1TA1Qx1t980OOsHBPBfEGx4l"
+  publishable-key="pk_test_51T9ufm1t980OOsHBZLGhHi81U0IjQlaLnxCYgKEBVfImeX8dRllQfVKPwAw5zPupitqAxH50tw4bDYrbpcD2bTHP00i1lHO4LE"
+>
+</stripe-buy-button>
+
+<!--- double membership --->
+<stripe-buy-button
+  buy-button-id="buy_btn_1TA1RX1t980OOsHBPe4NFXqE"
+  publishable-key="pk_test_51T9ufm1t980OOsHBZLGhHi81U0IjQlaLnxCYgKEBVfImeX8dRllQfVKPwAw5zPupitqAxH50tw4bDYrbpcD2bTHP00i1lHO4LE"
+>
+</stripe-buy-button>
+
+{{< /flexcols >}}
+
+{{% flexcols %}}
+### Add-ons
+{{% /flexcols %}}
+
+{{< flexcols >}}
+
+<!--- dry storage -->
+<stripe-buy-button
+  buy-button-id="buy_btn_1TA1KT1t980OOsHBZbfrytv9"
+  publishable-key="pk_test_51T9ufm1t980OOsHBZLGhHi81U0IjQlaLnxCYgKEBVfImeX8dRllQfVKPwAw5zPupitqAxH50tw4bDYrbpcD2bTHP00i1lHO4LE"
+>
+</stripe-buy-button>
+
+<!--- 6 boxes in the 80 -->
+<stripe-buy-button
+  buy-button-id="buy_btn_1TA1Me1t980OOsHB97FLaI7a"
+  publishable-key="pk_test_51T9ufm1t980OOsHBZLGhHi81U0IjQlaLnxCYgKEBVfImeX8dRllQfVKPwAw5zPupitqAxH50tw4bDYrbpcD2bTHP00i1lHO4LE"
+>
+</stripe-buy-button>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1TA2CZ1t980OOsHBo1V4NXk1"
+  publishable-key="pk_test_51T9ufm1t980OOsHBZLGhHi81U0IjQlaLnxCYgKEBVfImeX8dRllQfVKPwAw5zPupitqAxH50tw4bDYrbpcD2bTHP00i1lHO4LE"
+>
+</stripe-buy-button>
+
+{{< /flexcols >}}
+
+{{% flexcols %}}
+### Private rental for businesses/startups
+{{% /flexcols %}}
+
+{{< flexcols >}}
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1TA2Eb1t980OOsHBsm2X4ZXq"
+  publishable-key="pk_test_51T9ufm1t980OOsHBZLGhHi81U0IjQlaLnxCYgKEBVfImeX8dRllQfVKPwAw5zPupitqAxH50tw4bDYrbpcD2bTHP00i1lHO4LE"
+>
+</stripe-buy-button>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1TA2F71t980OOsHBzTbDUGaN"
+  publishable-key="pk_test_51T9ufm1t980OOsHBZLGhHi81U0IjQlaLnxCYgKEBVfImeX8dRllQfVKPwAw5zPupitqAxH50tw4bDYrbpcD2bTHP00i1lHO4LE"
+>
+</stripe-buy-button>
+
+{{< /flexcols >}}
+## How do I cancel?
+
+Great question
 
