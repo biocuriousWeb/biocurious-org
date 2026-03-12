@@ -14,6 +14,7 @@ params:
 
   address: "3108 Patrick Henry Drive, Santa Clara, CA, 95054"
   email: "info@biocurious.org"
+  meetup: "https://www.meetup.com/biocurious/events/"
   #phone: "555 555 5555"
 
   navbar:
