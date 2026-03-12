@@ -1,0 +1,9 @@
+{{ range where .Site.RegularPages.ByPublishDate.Reverse "Section" "==" "posts" }}
+<h6>
+    <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+    </a>
+</h6>
+{{ end }}
+
+
