@@ -1,7 +1,6 @@
 languageCode: 'en-us'
 title: 'BioCurious'
 theme: 
-- "hugo-shortcode-roneo-collection"
 - "hextra"
 
 markup:
