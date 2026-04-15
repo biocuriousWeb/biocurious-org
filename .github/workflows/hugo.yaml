@@ -78,9 +78,9 @@ jobs:
           restore-keys:
             hugo-
       - name: Build the site
-        run: |
         #- git submodule update --init --remote --merge
         #- hugo --gc --baseURL "https://darachm.gitlab.io/biocurious-org"
+        run: |
           hugo build \
             --gc \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
